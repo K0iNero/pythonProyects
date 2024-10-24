@@ -1,4 +1,4 @@
-#Calculadora simple - Israel
+#Calculadora simple - Israel GP
 
 operando = "1"
 while operando!="0": 
