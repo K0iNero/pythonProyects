@@ -1,0 +1,24 @@
+<!-- usuarios/templates/usuarios/exito.html -->
+<!-- Html utilizado para cuando se realice un formulario con exito, muestra un mensaje de exito -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Éxito</title>
+    <!-- Cargar las etiquetas estáticas -->
+    {% load static %}s
+    <!-- Vincular CSS -->
+    <link rel="stylesheet" href="{% static 'usuarios/css/estilos.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>¡Datos guardados exitosamente!</h1>
+        <a href="/usuarios/formulario/" class="boton">Volver al formulario</a>
+    </div>
+</body>
+
+</html>

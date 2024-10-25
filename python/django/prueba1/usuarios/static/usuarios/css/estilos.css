@@ -1,0 +1,85 @@
+/*clase css para modificar el html y estilizarlo
+/* usuarios/static/usuarios/css/estilos.css */
+
+/* Fuente retro pero legible: Courier Prime */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+body {
+    background-color: #f0f0f0;
+    font-family: 'Courier Prime', monospace; /* Fuente retro legible */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 2px solid #000;
+    box-shadow: 5px 5px 0px #d4d4d4;
+    text-align: center;
+}
+
+h1 {
+    color: #000;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario select,
+.formulario textarea {
+    width: 85%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-family: 'Courier Prime', monospace;
+    background-color: #f7f7f7;
+    font-size: 12px;
+}
+
+.formulario textarea {
+    height: 100px;
+    
+}
+
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    border: 2px solid #000;
+    box-shadow: 3px 3px 0px #d4d4d4;
+    transition: background-color 0.2s;
+}
+
+.boton:hover {
+    background-color: #444;
+}
+
+a.boton {
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+    background-color: #0077cc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #000;
+    transition: background-color 0.2s;
+}
+
+a.boton:hover {
+    background-color: #005999;
+}
