@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicaciones</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Publicaciones</h1>
+        
+        <a href="{% url 'agregar_publicacion' %}">
+            <button>Añadir Nueva Publicación</button>
+        </a>
+        
+        <ul>
+            {% for publicacion in publicaciones %}
+                <li class="publicacion-item">
+                    <h2 class="publicacion-titulo">
+                        <a href="{% url 'ver_publicacion' publicacion.id %}">{{ publicacion.title }}</a>
+                    </h2>
+                    <p>{{ publicacion.content }}</p>
+                    <p class="publicacion-autor-fecha">Autor: {{ publicacion.author }} | Fecha: {{ publicacion.date }}</p>
+                    <p>Respuestas: {{ publicacion.comments|length }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <script>
+        if (window.location.search.includes('success=true')) {
+            alert('¡Publicación agregada con éxito!');
+        }
+    </script>
+</body>
+</html>

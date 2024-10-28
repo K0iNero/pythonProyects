@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ publicacion.title }}</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <div class="container">
+        <!-- Título de la Publicación -->
+        <h1>{{ publicacion.title }}</h1>
+        <p>{{ publicacion.content }}</p>
+        <p>Autor: {{ publicacion.author }} | Fecha: {{ publicacion.date }}</p>
+        
+        <!-- Listado de Comentarios -->
+        <h2>Comentarios</h2>
+        <ul>
+            {% for comentario in publicacion.comments %}
+                <li class="comentario-item">
+                    <p>{{ comentario.content }}</p>
+                    <p class="comentario-autor-fecha">Autor: {{ comentario.author }} | Fecha: {{ comentario.date }}</p>
+                </li>
+            {% empty %}
+                <p>No hay comentarios aún. ¡Sé el primero en comentar!</p>
+            {% endfor %}
+        </ul>
+
+        <!-- Formulario para Agregar un Nuevo Comentario -->
+        <h3>Agregar un comentario</h3>
+        <form method="POST" action="{% url 'agregar_comentario' publicacion.id %}">
+            {% csrf_token %}
+            <label for="author">Autor:</label>
+            <input type="text" name="author" required>
+            <label for="content">Contenido:</label>
+            <textarea name="content" required></textarea>
+            <button type="submit">Agregar Comentario</button>
+        </form>
+        
+        <!-- Botón para Volver al Inicio -->
+        <a href="{% url 'listar_publicaciones' %}">
+            <button>Volver a Inicio</button>
+        </a>
+    </div>
+</body>
+</html>

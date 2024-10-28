@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "title": "Primera publicaci\u00f3n",
+        "content": "Este es el contenido de la primera publicaci\u00f3n.",
+        "author": "Admin",
+        "date": "2023-10-01 12:00:00",
+        "comments": [
+            {
+                "id": 1,
+                "author": "Usuario1",
+                "content": "\u00a1Gran publicaci\u00f3n!",
+                "date": "2023-10-02 10:30:00"
+            },
+            {
+                "id": 2,
+                "author": "Israel",
+                "content": "Primer comentariooo :)",
+                "date": "2024-10-28 14:27:28"
+            },
+            {
+                "id": 3,
+                "author": "Pepe",
+                "content": "Me han quitado el primer comentario :(",
+                "date": "2024-10-28 14:27:53"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "a",
+        "content": "a",
+        "author": "a",
+        "date": "2024-10-28 14:29:45",
+        "comments": [
+            {
+                "id": 1,
+                "author": "a",
+                "content": "a",
+                "date": "2024-10-28 14:29:50"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "a",
+        "content": "a",
+        "author": "a",
+        "date": "2024-10-28 14:30:44",
+        "comments": []
+    }
+]
